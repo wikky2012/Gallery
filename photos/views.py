@@ -5,15 +5,14 @@ from .models import Photo
 
 # Create your views here.
 def welcome(request):
-    news = "Welcome all"
-    return render (request, 'all-photos/photo.html',{"news":news})
+    return render (request, 'all-photos/photo.html')
     
 
 def search_results(request):
     
     if 'photo' in request.GET and request.GET["photo"]:
         search_term = request.GET.get("photo")
-        searched_photos = Photo.search_by_title(search_term)
+        searched_photos = Photo.search_by_category(search_term)
         message = f"{search_term}"
 
         return render(request, 'all-photos/search.html',{"message":message,"photos": searched_photos})

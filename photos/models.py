@@ -3,17 +3,17 @@ import datetime as dt
 
 
 class Photo(models.Model):
-    title = models.CharField(max_length =60)
+    category = models.CharField(max_length =60)
     location = models.CharField(max_length =60)
-    my_image = models.ImageField(upload_to = 'photo/')
+    image = models.ImageField(upload_to = 'photo/')
     
     def __str__(self):
-        return self.title
+        return self.category
 
 
     @classmethod
-    def search_by_title(cls,search_term):
-        news = cls.objects.filter(title__icontains=search_term)
+    def search_by_category(cls,search_term):
+        news = cls.objects.filter(category__icontains=search_term)
         return news
         
     
