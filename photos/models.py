@@ -10,6 +10,12 @@ class Photo(models.Model):
     def __str__(self):
         return self.category
 
+    class meta:
+        ordering =['name']
+    
+    def save_photo(self):
+        self.save()
+
 
     @classmethod
     def search_by_category(cls,search_term):
