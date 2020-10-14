@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'wycliffe.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'gallery',
+        'NAME':'mygallery',
         'USER':'wikky',
         'PASSWORD':'31406611'
     }
