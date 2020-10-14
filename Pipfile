@@ -8,6 +8,12 @@ verify_ssl = true
 [packages]
 coverage = "*"
 pytest = "*"
+django-environ = "*"
+django = "*"
+whitenoise = "*"
+django-heroku = "*"
+gunicorn = "*"
+python-decouple = "*"
 
 [requires]
 python_version = "3.8"
